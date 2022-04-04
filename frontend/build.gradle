@@ -1,0 +1,22 @@
+plugins {
+    id 'base'
+    id 'com.github.node-gradle.node' version '3.2.1'
+}
+
+node {
+    version = '16.8.0'
+
+    npmVersion = '7.21.0'
+
+    distBaseUrl = 'https://nodejs.org/dist'
+
+    download = true
+}
+
+clean.delete "dist"
+task npmBuild(type: NpmTask) {
+    dependsOn 'npmInstall'
+
+    args = ['run', 'build']
+}
+build.dependsOn npmBuild
