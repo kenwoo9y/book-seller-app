@@ -19,6 +19,8 @@ build/
 */yarn-error.log*
 */pnpm-debug.log*
 
+backend/src/main/resources/static/
+
 ### STS ###
 .apt_generated
 .classpath
