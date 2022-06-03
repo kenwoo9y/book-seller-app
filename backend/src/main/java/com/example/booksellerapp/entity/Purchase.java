@@ -6,10 +6,10 @@ import lombok.Data;
 
 @Data
 public class Purchase {
-    private Long id;
-    private Long userId;
+    private String id;
+    private String userId;
     private User user;
-    private Long bookId;
+    private String bookId;
     private Book book;
     private Double price;
     private LocalDateTime purchaseDateTime;
