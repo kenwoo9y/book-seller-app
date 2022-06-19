@@ -1,3 +1,13 @@
 package com.example.booksellerapp.service;
 
-public interface BookService {}
+import java.util.List;
+
+import com.example.booksellerapp.entity.Book;
+
+public interface BookService {
+    Book saveBook(Book book);
+
+    List<Book> getAllBooks();
+
+    void deleteBookById(String bookId);
+}
