@@ -1,8 +1,7 @@
 package com.example.booksellerapp.controller;
 
-import java.nio.file.attribute.UserPrincipal;
-
 import com.example.booksellerapp.entity.Role;
+import com.example.booksellerapp.security.UserPrincipal;
 import com.example.booksellerapp.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
