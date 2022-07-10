@@ -4,7 +4,18 @@ spring:
         url: jdbc:postgresql://localhost:5432/book_seller_db?currentSchema=book_seller_sc&ssl=false
         username: admin
         password: password
+    
+    main:
+        allow-circular-references: true
 
 mybatis:
     configuration:
         map-underscore-to-camel-case: true
+
+app:
+    jwt:
+        #Key depends on JWT algorithm; If RSA => needs public,private; if HMAC => needs only single key
+        secret: RandomSecretKey12345678!RandomSecretKey12345678!RandomSecretKey12345678!RandomSecretKey12345678!
+        
+        #1 day
+        expiration: in.ms=86400000
